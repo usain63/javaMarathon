@@ -10,7 +10,6 @@ public class Task2 {
             double devidend = scanner1.nextDouble();
 
             System.out.print("Введдите делитель: ");
-            Scanner scanner2 = new Scanner(System.in);
             double devider = scanner1.nextDouble();
             
             if (devider == 0) {

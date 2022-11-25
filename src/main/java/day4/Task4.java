@@ -19,8 +19,10 @@ public class Task4 {
         System.out.println("Наш массив " + Arrays.toString(myArray));
         
         for (int i =0; i < (n - 2); i++) {
-            currentSum = myArray[i] + myArray[i + 1] + myArray[i + 2];
-            //coreIndex = i;
+            
+            for (int j = i; j < i +2; j++)
+                currentSum += myArray[j];
+            
             if (currentSum > maxSum) {
                 maxSum = currentSum;
                 coreIndex = i;
