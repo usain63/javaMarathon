@@ -21,6 +21,9 @@ public class Player {
   }
   
   public void run() {
+    if (stamina == 0) 
+      return;
+    
     stamina--;
     if (stamina == 0) 
       countPlayers--;
