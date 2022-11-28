@@ -1,7 +1,7 @@
 package day7;
 
 public class Player {
-  public static int countPlayers = 0;
+  private static int countPlayers = 0;
   private int stamina = 0;
   public static final int MAX_STAMINA = 100;
   public static final int MIN_STAMINA = 0;
@@ -16,7 +16,7 @@ public class Player {
 
   public Player(int stamina) {
     this.stamina = stamina;
-    while(countPlayers < 6)
+    if (countPlayers < 6)
     countPlayers++;
   }
   

@@ -7,6 +7,7 @@ public class Task2 {
         Random randInt = new Random();
         
         Player player1 = new Player(randInt.nextInt(11)+90);
+        Player.info();
         Player player2 = new Player(randInt.nextInt(11)+90);
         Player player3 = new Player(randInt.nextInt(11)+90);
         Player player4 = new Player(randInt.nextInt(11)+90);
@@ -18,7 +19,9 @@ public class Task2 {
         System.out.println(Player.getCountPlayers()); // создали 7го игрока и проверяем, что количество игроков на поле по прежнему 6
         System.out.println();
         
-        while (player5.getStamina() >= Player.MIN_STAMINA)
+        int x = player5.getStamina();
+        
+        for (int i = 0; i < x; i++ )
             player5.run();
         
         System.out.println("Количество игроков на поле " + Player.getCountPlayers());

@@ -50,8 +50,10 @@ public class Airplane {
   public static void compareAirplanes (Airplane plane1, Airplane plane2) {
     if (plane1.length > plane2.length)
       System.out.println("Cамолет " + plane1.toString() + " длиннее");
-    else
+    else if (plane1.length < plane2.length)
       System.out.println("Cамолет " + plane2.toString() + " длиннее");
+    else
+      System.out.println("Самолеты одинаковой длины");
   }
   public String toString() {
     return this.manufacturer;
