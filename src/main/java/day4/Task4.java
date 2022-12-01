@@ -20,7 +20,7 @@ public class Task4 {
         
         for (int i =0; i < (n - 2); i++) {
             
-            for (int j = i; j < i +3; j++)
+            for (int j = i; j < i +2; j++)
                 currentSum += myArray[j];
             
             if (currentSum > maxSum) {
