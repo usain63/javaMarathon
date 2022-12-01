@@ -10,13 +10,13 @@ public class Warrior extends Hero implements PhysAttack{
     this.magicDef = 0;
   }
 
-  @Override
-  public void physicalAttack(Hero hero) {
-    if ((hero.health - physAtt * (1 - hero.physDef)) <= 0)
-      hero.health = MIN_HEALTH;
-    else
-      hero.health -= physAtt * (1 - hero.physDef);
-  }
+//  @Override
+//  public void physicalAttack(Hero hero) {
+//    if ((hero.health - physAtt * (1 - hero.physDef)) <= 0)
+//      hero.health = MIN_HEALTH;
+//    else
+//      hero.health -= physAtt * (1 - hero.physDef);
+//  }
   
   public String toString() {
     return "I'm a true WARRIOR with health " + this.health;
