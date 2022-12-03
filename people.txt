@@ -1,0 +1,5 @@
+MICHAEL 30
+ANN 14
+Alex 25
+Susan 41
+James 0
