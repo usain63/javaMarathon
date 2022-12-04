@@ -17,13 +17,12 @@ public class Task3 {
     public static List<Person> parseFileToObjList(File file) {
         List<Person> persons = new ArrayList<>();
         String [] devidedLine = new String[2];
-        String line = null;
 
         try {
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNextLine()){
-                line = scanner.nextLine();
+                String line = scanner.nextLine();
                 devidedLine = line.split(" ");
                 if (Integer.parseInt(devidedLine[1]) >= 0) {
                     persons.add(new Person(devidedLine[0], Integer.parseInt(devidedLine[1])));

@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Task1 {
@@ -15,7 +14,6 @@ public class Task1 {
     }
 
     public static void parseShoes(File file) {
-        String line = null;
         String[] lineArray = new String[3];
         List<String> missedShoes = new ArrayList<>();
         
@@ -23,11 +21,11 @@ public class Task1 {
             Scanner scanner = new Scanner(file);
 
             while (scanner.hasNextLine()) {
-                line = scanner.nextLine();
-                lineArray = line.split(";");
+                String lineOut = scanner.nextLine();
+                lineArray = lineOut.split(";");
                 
                 if (Integer.parseInt(lineArray[2]) == 0)
-                    missedShoes.add(line);
+                    missedShoes.add(lineOut.replace(";", ","));
             }
             scanner.close();
         } catch (FileNotFoundException e) {
