@@ -17,9 +17,8 @@ public class MessageDatabase {
   public static void showDialog (User u1, User u2) {
     List<Message> toShow = new ArrayList<>();
     for (Message messageToShow: messages) {
-      if (messageToShow.getSender() == u1 && messageToShow.getReceiver() == u2)
-        toShow.add(messageToShow);
-      else if (messageToShow.getSender() == u2 && messageToShow.getReceiver() == u1)
+      if ((messageToShow.getSender() == u1 && messageToShow.getReceiver() == u2) || 
+          (messageToShow.getSender() == u2 && messageToShow.getReceiver() == u1))
         toShow.add(messageToShow);
     }
     for (Message dialog: toShow) {

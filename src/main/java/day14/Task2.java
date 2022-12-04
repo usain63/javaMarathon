@@ -19,25 +19,24 @@ public class Task2 {
     public static List<String> parseFileToStringList (File file) {
         List<String> peoples = new ArrayList<>();
         String [] devidedLine = new String[3];
-        String line = null;
 
         try {
             Scanner scanner = new Scanner(file);
             
             while (scanner.hasNextLine()){
-                line = scanner.nextLine();
+                String line = scanner.nextLine();
                 devidedLine = line.split(" ");
                 if (Integer.parseInt(devidedLine[1]) >= 0) 
                     peoples.add(line);
                 else
-                    throw new IOException();
+                    throw new IOException("Некорректный входной файл");
             }
             scanner.close();
                     
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         } catch (IOException e) {
-            System.out.println("Некорректный входной файл");
+            System.out.println(e.getMessage());
             peoples = null;
         }
         return peoples;
