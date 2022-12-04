@@ -7,7 +7,6 @@ public class Magician extends Hero implements PhysAttack, MagicAttack{
   public Magician() {
     this.physAtt = 5;
     this.magicAtt = 20;
-    this.health = 100;
     this.magicDef = 0.8F;
     this.physDef = 0;
   }
@@ -19,14 +18,6 @@ public class Magician extends Hero implements PhysAttack, MagicAttack{
     else
       hero.health -= magicAtt * (1 - hero.magicDef);
   }
-
-//  @Override
-//  public void physicalAttack(Hero hero) {
-//    if ((hero.health - physAtt * (1 - hero.physDef)) <= 0)
-//      hero.health = MIN_HEALTH;
-//    else
-//      hero.health -= physAtt * (1 - hero.physDef);
-//  }
 
   @Override
   public String toString() {

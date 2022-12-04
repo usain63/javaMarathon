@@ -16,8 +16,8 @@ public class Task1 {
         System.out.println("ЗП первого сборщика: " + picker.getSalary());
         System.out.println("ЗП первого курьера: " + courier.getSalary());
 
-        System.out.println("Бонусы первого сбощика: " + picker.totalBonus);
-        System.out.println("Бонусы первого курьера: " + courier.totalBonus);
+        System.out.println("Бонусы первого сбощика: " + picker.getTotalBonus());
+        System.out.println("Бонусы первого курьера: " + courier.getTotalBonus());
         
         picker.bonus(); // повторный бонус сборщика
         picker.bonus(); // повторный бонус курьера
@@ -36,8 +36,8 @@ public class Task1 {
         System.out.println("ЗП сборщика: " + picker.getSalary());
         System.out.println("ЗП курьера: " + courier.getSalary());
 
-        System.out.println("Бонусы первого сбощика: " + picker.totalBonus);
-        System.out.println("Бонусы курьера: " + courier.totalBonus);
+        System.out.println("Бонусы первого сбощика: " + picker.getTotalBonus());
+        System.out.println("Бонусы курьера: " + courier.getTotalBonus());
        
     } 
     static void businessProcess(Worker worker) {

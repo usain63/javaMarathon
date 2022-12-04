@@ -1,8 +1,9 @@
 package day11.task1;
 
 public class Warehouse {
-  public int countPickedOrders;
-  public int countDeliveredOrders;
+  private int countPickedOrders;
+  private int countDeliveredOrders;
+  public final static int PLAN = 10000;
 
   public int getCountPickedOrders() {
     return countPickedOrders;
@@ -10,6 +11,14 @@ public class Warehouse {
 
   public int getCountDeliveredOrders() {
     return countDeliveredOrders;
+  }
+  
+  public void addOnePickedOrder() {
+    countPickedOrders++;
+  }
+  
+  public void addOneDeliveredOrder() {
+    countDeliveredOrders++;
   }
   
   public String toString() {

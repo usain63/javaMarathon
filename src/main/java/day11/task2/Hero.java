@@ -8,6 +8,10 @@ public abstract class Hero {
   public float physDef;
   public float magicDef;
 
+  public Hero() {
+    health = 100;
+  }
+
   public void physicalAttack(Hero hero) {
     if ((hero.health - physAtt * (1 - hero.physDef)) <= 0)
       hero.health = MIN_HEALTH;
