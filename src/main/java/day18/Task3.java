@@ -38,12 +38,8 @@ public class Task3 {
         if (root == null)
             return;
         
-        if (root.getLeftSon() != null){
             dfs(root.getLeftSon());
-        }
         System.out.print(root.getValue() + " ");
-        if (root.getRightSon() != null){
             dfs(root.getRightSon());
-        }
     }
 }
