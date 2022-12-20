@@ -27,6 +27,7 @@ public class Task4 {
                 maxSum = currentSum;
                 coreIndex = i;
             }
+            currentSum = 0;
         }
         System.out.println("Максимальная сумма : " + maxSum);
         System.out.println("Первый индекс в максимальной тройке: " + coreIndex);
